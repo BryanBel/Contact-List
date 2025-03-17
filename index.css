@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk';
+}
+
+.space-grotesk-font {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+body {
+    background: #F5F1E3;
+    max-height: 100vh;
+    padding: 20px;
+}
+
+#main {
+    padding: 10px;
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 2.5px solid black;
+    border-radius: 2%;
+}
+
+.title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.main-form-helper-text {
+    color: red;
+    font-size: 0.8rem;
+    padding: 0px 0px 7px 0px;
+}
+
+input {
+    width: 100%;
+}
+
+.input  {
+    width: 100%;
+    padding: 1rem;
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(47, 165, 255);
+}
+
+.edit-button {
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: yellow;
+}
+
+.delete-button {
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: red;
+}
+
+svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    stroke-width: 2px;
+    padding: 2px;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#main-form {
+    display: flex;
+    gap: 1rem;
+    padding: 3%;
+}
+
+#contact-container {
+    width: 100%;
+    gap: 5px;
+    border: 2.5px solid black;
+    border-radius: 3%;
+    height: 40%;
+}
+
+#list-container {
+    width: 100%;
+    gap: 5px;
+    padding: 10px;
+    border: 2.5px solid black;
+    border-radius: 3%;
+    height: 60%;
+}
+
+#contact-list {
+    list-style: none;
+}
+
+.name   {
+    width: 50%;
+    padding: 3%;
+    border: 2.5px solid black;
+    border-radius: 4%;
+}
+
+.number   {
+    width: 30%;
+    padding: 3%;
+    border: 2.5px solid black;
+    border-radius: 4%;
+}
+
+.button {
+    display: flex;
+    gap: 5px;
+    padding: 3%;
+    border: 2.5px solid black;
+    border-radius: 4%
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul > li {
+    display: flex;
+    gap: 5px;
+}
+
+@media (max-width: 690px) {
+    .title {
+        font-size: 1rem;
+}
+}
