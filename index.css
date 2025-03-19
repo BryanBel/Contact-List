@@ -1,160 +1,229 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #000000;
+    --button-bg: rgb(211, 152, 250);
+    --button-hover: rgb(195, 132, 238);
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+    --helper-text-color: #fa0000;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Space Grotesk';
+    font-family: 'Gidole';
 }
 
-.space-grotesk-font {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
+.gidole-regular {
+    font-family: "Gidole", sans-serif;
+    font-weight: 400;
     font-style: normal;
   }
 
 body {
-    background: #F5F1E3;
-    max-height: 100vh;
-    padding: 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    max-height: 100dvh;
+    overflow: hidden;
 }
 
 #main {
-    padding: 10px;
-    max-width: 50%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
-    border: 2.5px solid black;
-    border-radius: 2%;
+    gap: 1rem;
 }
 
-.title {
-    color: black;
+#input-container {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1rem;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#contact-list {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 1rem;
+    max-height: 47vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+input {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+#input-container, #contact-list {
+    border-color: var(--border-color);
+}
+
+#input-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.saved-contact {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    flex-shrink: 0;
+    }
+
+.saved-name {
+        width: 100%;
+        height: 2rem;
+        border-width: 1px;
+        border-radius: 7px;
+        padding: 0.75rem;
+        max-width: 45%;
+}
+
+.saved-num {
+        width: 100%;
+        height: 2rem;
+        border-width: 1px;
+        border-radius: 7px;
+        padding: 0.75rem;
+        max-width: 35%;
 }
 
 h2 {
     font-size: 1rem;
+    font-weight: 700;
 }
 
-.main-form-helper-text {
-    color: red;
-    font-size: 0.8rem;
-    padding: 0px 0px 7px 0px;
+.error-message {
+    color: var(--helper-text-color);
+    font-size: 0.75rem;
 }
 
-input {
+#name {
     width: 100%;
+    height: 2rem;
+    border-width: 1px;
+    border-radius: 7px;
+    padding: 0.75rem;
 }
 
-.input  {
+#phone {
     width: 100%;
-    padding: 1rem;
+    height: 2rem;
+    border-width: 1px;
+    border-radius: 7px;
+    padding: 0.75rem;
 }
 
-.add-button {
+button {
+    border-width: 0;
+    border-radius: 7px;
+    padding: 0.3rem;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+button svg {
+    stroke: var(--text-color);
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.add-contact {
+    background-color: rgb(211, 152, 250);
     display: flex;
-    align-items: center;
     justify-content: center;
-    border: 2px solid black;
-    width: 100%;
-    border-radius: 8px;
-    background-color: rgb(47, 165, 255);
-}
-
-.edit-button {
-    border: 2px solid black;
-    border-radius: 8px;
-    background-color: yellow;
-}
-
-.delete-button {
-    border: 2px solid black;
-    border-radius: 8px;
-    background-color: red;
-}
-
-svg {
-    display: flex;
     align-items: center;
+}
+
+.add-contact svg {
+    height: 2rem;
+    width: 2rem;
+    stroke-width: 1.5;
+    stroke: black;
+}
+
+.edit-contact {
+    background-color: rgb(211, 152, 250);
+    display: flex;
     justify-content: center;
-    stroke-width: 2px;
-    padding: 2px;
-    margin: 0;
-    width: 30px;
-    height: 30px;
+    align-items: center;
 }
 
-#main-form {
+.delete-contact {
+    background-color: rgb(211, 152, 250);
     display: flex;
-    gap: 1rem;
-    padding: 3%;
+    justify-content: center;
+    align-items: center;
 }
 
-#contact-container {
-    width: 100%;
-    gap: 5px;
-    border: 2.5px solid black;
-    border-radius: 3%;
-    height: 40%;
-}
-
-#list-container {
-    width: 100%;
-    gap: 5px;
-    padding: 10px;
-    border: 2.5px solid black;
-    border-radius: 3%;
-    height: 60%;
-}
-
-#contact-list {
-    list-style: none;
-}
-
-.name   {
-    width: 50%;
-    padding: 3%;
-    border: 2.5px solid black;
-    border-radius: 4%;
-}
-
-.number   {
-    width: 30%;
-    padding: 3%;
-    border: 2.5px solid black;
-    border-radius: 4%;
-}
-
-.button {
+.edit-contact svg {
     display: flex;
-    gap: 5px;
-    padding: 3%;
-    border: 2.5px solid black;
-    border-radius: 4%
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: black;
+    stroke-width: 1.5;
 }
 
-ul {
+.delete-contact svg {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: black;
+    stroke-width: 1.5;
 }
 
-ul > li {
-    display: flex;
-    gap: 5px;
+@media (max-width: 489px) {
+    .saved-contact {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .saved-name {
+        max-width: 100%;
+    }
+    .saved-num {
+        max-width: 100%;
+    }
 }
 
-@media (max-width: 690px) {
-    .title {
-        font-size: 1rem;
-}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #ffffff;
+        --border-color: #666666;
+        --button-bg: rgb(142, 73, 185);
+        --button-hover: rgb(123, 58, 163);
+        --input-bg: #2d2d2d;
+        --input-border: #404040;
+        --helper-text-color: #d16c6c;
+    }
 }
